@@ -1,0 +1,56 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDWQkNe_JUuD68WEI8wAi6dsv1ttqINrJE",
+  authDomain: "instagram-f8424.firebaseapp.com",
+  projectId: "instagram-f8424",
+  storageBucket: "instagram-f8424.appspot.com",
+  messagingSenderId: "578879631028",
+  appId: "1:578879631028:web:bf8289100956158cfdb1e1",
+  measurementId: "G-Q3EDE1M1HV"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+firebase login
+
+firebase init
+
+firebase deploy
+
+ instagram-f8424.web.app
+
+ //development_rules
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if
+      request.time < timestamp.date(2023, 6, 21)
+    }
+  }
+}
+
+//production_rules
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read;
+    allow write: if request.auth.uid != null
+    }
+  }
+}
+
