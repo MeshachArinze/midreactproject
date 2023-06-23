@@ -30,5 +30,5 @@ export default function Dashboard(user) {
 }
 
 Dashboard.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.any,
 };
