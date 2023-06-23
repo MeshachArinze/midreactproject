@@ -7,7 +7,7 @@ import useUser from "../hooks/use-user";
 import LoggedInUserContext from "../context/logged-in-user";
 
 // eslint-disable-next-line react/prop-types
-export default function Dashboard({user}) {
+export default function Dashboard(user) {
 
  
   // eslint-disable-next-line react/prop-types
@@ -30,5 +30,5 @@ export default function Dashboard({user}) {
 }
 
 Dashboard.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.any,
 };
