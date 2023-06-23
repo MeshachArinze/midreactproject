@@ -1,6 +1,6 @@
 /* eslint-disable no-plusplus */
-// NOTE: replace 'NvPY9M9MzFTARQ6M816YAzDJxZ72' with your Firebase auth user id (can be taken from Firebase)
-export function seedDatabase(firebase) {
+// NOTE: replace '2QN2xSY96ugovQJki2T1Es3qDff2' with your Firebase auth user id (can be taken from Firebase)
+export function seedDatabase(db) {
   const users = [
     {
       userId: "2QN2xSY96ugovQJki2T1Es3qDff2",
@@ -17,7 +17,7 @@ export function seedDatabase(firebase) {
       fullName: "Raffaello Sanzio da Urbino",
       emailAddress: "raphael@sanzio.com",
       following: [],
-      followers: ["NvPY9M9MzFTARQ6M816YAzDJxZ72"],
+      followers: ["2QN2xSY96ugovQJki2T1Es3qDff2"],
       dateCreated: Date.now(),
     },
     {
@@ -26,7 +26,7 @@ export function seedDatabase(firebase) {
       fullName: "Salvador Dalí",
       emailAddress: "salvador@dali.com",
       following: [],
-      followers: ["NvPY9M9MzFTARQ6M816YAzDJxZ72"],
+      followers: ["2QN2xSY96ugovQJki2T1Es3qDff2"],
       dateCreated: Date.now(),
     },
     {
@@ -35,20 +35,19 @@ export function seedDatabase(firebase) {
       fullName: "George Orwell",
       emailAddress: "george@orwell.com",
       following: [],
-      followers: ["NvPY9M9MzFTARQ6M816YAzDJxZ72"],
+      followers: ["2QN2xSY96ugovQJki2T1Es3qDff2"],
       dateCreated: Date.now(),
     },
   ];
 
   // eslint-disable-next-line prefer-const
   for (let k = 0; k < users.length; k++) {
-    firebase.firestore().collection('users').add(users[k]);
+    db.collection('users').add(users[k]);
   }
 
   // eslint-disable-next-line prefer-const
   for (let i = 1; i <= 5; ++i) {
-    firebase
-      .firestore()
+    db
       .collection('photos')
       .add({
         photoId: i,
