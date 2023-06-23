@@ -1,16 +1,18 @@
-import {Grid} from "react-loader-spinner";
+import {ThreeDots} from "react-loader-spinner";
 
 export default function Loader() {
   return (
-    <Grid
-      height="80"
-      width="80"
-      color="#4fa94d"
-      ariaLabel="grid-loading"
-      radius="12.5"
-      wrapperStyle={{}}
-      wrapperClass=""
-      visible={true}
-    />
+    <div className="grid grid-col place-items-center h-[100%] w-full">
+      <ThreeDots
+        height="80"
+        width="80"
+        radius="9"
+        color="#4fa94d"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClassName=""
+        visible={true}
+      />
+    </div>
   );
 }
