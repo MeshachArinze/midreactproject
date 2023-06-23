@@ -1,13 +1,16 @@
-import Loader from "react-loader-spinner";
+import {Grid} from "react-loader-spinner";
 
 export default function ReactLoader() {
   return (
-    <Loader
-      type="TailSpin"
-      color="#00000059"
-      height={70}
-      width={70}
-      className="flex justify-center mt-12"
+    <Grid
+      height="80"
+      width="80"
+      color="#4fa94d"
+      ariaLabel="grid-loading"
+      radius="12.5"
+      wrapperStyle={{}}
+      wrapperClass=""
+      visible={true}
     />
   );
 }
