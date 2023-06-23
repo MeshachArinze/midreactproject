@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes, redirect } from "react-router-dom";
-import Loader from "./components/loader";
+// import Loader from "./components/loader";
 import * as ROUTES from "./constant/routes";
 
 import UserContext from "./context/user";
