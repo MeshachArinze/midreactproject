@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes, redirect } from "react-router-dom";
-import ReactLoader from "./components/loader";
+import Loader from "./components/loader";
 import * as ROUTES from "./constant/routes";
 import UserContext from "./context/user";
 import useAuthListener from "./hooks/use-auth-listener";
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <UserContext.Provider value={{ user }}>
       <Router>
-        <Suspense fallback={<ReactLoader />}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path={ROUTES.LOGIN} element={<Login />} />
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
